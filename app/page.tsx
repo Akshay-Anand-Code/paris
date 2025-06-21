@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import { FiVolume2, FiVolumeX } from "react-icons/fi";
 
 const Page = () => {
   const [confirmed, setConfirmed] = useState(false);
+  const [muted, setMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleConfirm = () => {
@@ -11,9 +13,17 @@ const Page = () => {
     setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.muted = false;
+        setMuted(false);
         videoRef.current.play();
       }
     }, 100);
+  };
+
+  const handleToggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setMuted(videoRef.current.muted);
+    }
   };
 
   const Ticker = ({ position }: { position: "top" | "bottom" }) => (
@@ -48,6 +58,17 @@ const Page = () => {
         <>
           <Ticker position="top" />
           <Ticker position="bottom" />
+          <button
+            onClick={handleToggleMute}
+            className="absolute top-20 right-4 z-50 bg-black bg-opacity-60 text-white p-2 rounded-full shadow hover:bg-opacity-80 transition"
+            aria-label={muted ? "Unmute" : "Mute"}
+          >
+            {muted ? (
+              <FiVolumeX className="w-7 h-7" />
+            ) : (
+              <FiVolume2 className="w-7 h-7" />
+            )}
+          </button>
         </>
       )}
 
@@ -65,7 +86,7 @@ const Page = () => {
           ref={videoRef}
           autoPlay
           loop
-          muted
+          muted={muted}
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
@@ -86,15 +107,13 @@ const Page = () => {
         ) : (
           <>
             <img src="/title.png" className="w-1/2" />
-            <img
-              src="/nbuyg.PNG"
-              className="w-[200px] cursor-pointer hover:brightness-110 transition-transform duration-300 transform hover:scale-110"
-            />
             <div className="flex gap-6">
-              <img
-                src="/x.png"
-                className="w-[100px] h-[100px] hover:scale-110 cursor-pointer"
-              />
+              <a href=" https://x.com/niggasinparisol" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/x.png"
+                  className="w-[100px] h-[100px] hover:scale-110 cursor-pointer"
+                />
+              </a>
               <img
                 src="/attach.png"
                 className="w-[100px] h-[100px] hover:scale-110 cursor-pointer"

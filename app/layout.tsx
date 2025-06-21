@@ -2,8 +2,11 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Level.gg',
-  description: 'Gaming Platform',
+  title: 'Nigass in Paris',
+  description: 'Nigga in Paris',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
