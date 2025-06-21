@@ -120,7 +120,7 @@ const Page = () => {
           border-top: 1px solid #222;
           border-bottom: 1px solid #222;
           z-index: 50;
-          height: 32px;
+          height: 65px;
           display: flex;
           align-items: center;
         }
