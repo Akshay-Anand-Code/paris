@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { FiVolume2, FiVolumeX } from "react-icons/fi";
+import SocialIcons from "@/components/ui/SocialIcons";
 
 const Page = () => {
   const [confirmed, setConfirmed] = useState(false);
@@ -107,22 +108,7 @@ const Page = () => {
         ) : (
           <>
             <img src="/title.png" className="w-1/2" />
-            <div className="flex gap-6">
-              <a href=" https://x.com/niggasinparisol" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/x.png"
-                  className="w-[100px] h-[100px] hover:scale-110 cursor-pointer"
-                />
-              </a>
-              <img
-                src="/attach.png"
-                className="w-[100px] h-[100px] hover:scale-110 cursor-pointer"
-              />
-              <img
-                src="/mask.png"
-                className="w-[100px] h-[100px] hover:scale-110 cursor-pointer"
-              />
-            </div>
+            <SocialIcons />
           </>
         )}
       </div>
