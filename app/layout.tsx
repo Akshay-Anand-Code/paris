@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Nigass in Paris',
+  title: 'Nigga in Paris',
   description: 'Nigga in Paris',
   icons: {
     icon: '/favicon.ico',
