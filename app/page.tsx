@@ -32,7 +32,7 @@ const Page = () => {
       <div className="ticker-track">
         <div className="ticker-content">
           {Array(50)
-            .fill("contract")
+            .fill("3jts9Rx31AJvZ2TRDoy2dJXZGzEDJB3GFXpKJ88fpump")
             .map((text, index) => (
               <span key={`${position}-${index}`} className="mr-10">
                 {text}
@@ -41,7 +41,7 @@ const Page = () => {
         </div>
         <div className="ticker-content">
           {Array(50)
-            .fill("address")
+            .fill("3jts9Rx31AJvZ2TRDoy2dJXZGzEDJB3GFXpKJ88fpump")
             .map((text, index) => (
               <span key={`${position}-dup-${index}`} className="mr-10">
                 {text}
