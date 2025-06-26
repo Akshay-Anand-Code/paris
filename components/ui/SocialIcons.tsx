@@ -12,7 +12,7 @@ const SocialIcons = () => {
           className="cursor-pointer transition-transform hover:scale-110"
         />
       </a>
-      <a href="https://pump.fun/coin/2HXyoRyiGsnYmv9NNKQdrHH5cndLF9pc2gihf7Eupump" target="_blank" rel="noopener noreferrer">
+      <a href="" target="_blank" rel="noopener noreferrer">
         <Image
           src="/attach.png"
           width={80}
@@ -21,7 +21,7 @@ const SocialIcons = () => {
           className="cursor-pointer transition-transform hover:scale-110"
         />
       </a>
-      <a href="https://pump.fun/coin/2HXyoRyiGsnYmv9NNKQdrHH5cndLF9pc2gihf7Eupump" target="_blank" rel="noopener noreferrer">
+      <a href="" target="_blank" rel="noopener noreferrer">
         <Image
           src="/mask.png"
           width={80}
